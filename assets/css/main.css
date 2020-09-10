@@ -900,22 +900,22 @@ input, select, textarea {
 
 	::-webkit-input-placeholder {
 		color: #39454b; /* Added by RLS3 on 9/10/20 */
-		opacity: 0.375;
+		opacity: 0.625;
 	}
 
 	:-moz-placeholder {
 		color: #39454b; /* Added by RLS3 on 9/10/20 */
-		opacity: 0.375;
+		opacity: 0.625;
 	}
 
 	::-moz-placeholder {
 		color: #39454b; /* Added by RLS3 on 9/10/20 */
-		opacity: 0.375;
+		opacity: 0.625;
 	}
 
 	:-ms-input-placeholder {
 		color: #39454b; /* Added by RLS3 on 9/10/20 */
-		opacity: 0.375;
+		opacity: 0.625;
 	}
 
 /* Icon */
