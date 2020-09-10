@@ -863,7 +863,7 @@ input, select, textarea {
 		width: 100%;
 		padding: 0.65em 0.75em;
 		background: none;
-		border: solid 2px #e5e6e7;
+		border: solid 2px #959b9e;
 		color: inherit;
 		border-radius: 0.5em;
 		outline: none;
@@ -899,18 +899,22 @@ input, select, textarea {
 	}
 
 	::-webkit-input-placeholder {
+		color: #39454b; /* Added by RLS3 on 9/10/20 */
 		opacity: 0.375;
 	}
 
 	:-moz-placeholder {
+		color: #39454b; /* Added by RLS3 on 9/10/20 */
 		opacity: 0.375;
 	}
 
 	::-moz-placeholder {
+		color: #39454b; /* Added by RLS3 on 9/10/20 */
 		opacity: 0.375;
 	}
 
 	:-ms-input-placeholder {
+		color: #39454b; /* Added by RLS3 on 9/10/20 */
 		opacity: 0.375;
 	}
 
@@ -2048,7 +2052,7 @@ input, select, textarea {
 			}
 
 			.main.style3.secondary {
-				background: #f5f6f7;
+				background: #959b9e;
 			}
 
 		.main.dark {
