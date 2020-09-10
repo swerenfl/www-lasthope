@@ -982,6 +982,7 @@ input, select, textarea {
 		.image.fit {
 			display: block;
 			width: 100%;
+			padding: 2px !important; /* Added by RLS3 9/10/20 */
 		}
 
 		.image.left {
