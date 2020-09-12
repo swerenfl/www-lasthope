@@ -2,7 +2,7 @@ function sendMessage() {
     // Construct POSTS
     var request = new XMLHttpRequest();
     request.open("POST", "https://discordapp.com/api/webhooks/753867196190556170/FtWnSZvS-3hXzzC7qwlXoA9JvmqW_TmkBRQkIWRK8dZEAdGPs61Igk_i9IltCaKVaIct");
-    
+   
     // Obtain values from document
     request.setRequestHeader('Content-type', 'application/json');
     var charname = document.getElementById("charname").value;
@@ -12,10 +12,10 @@ function sendMessage() {
     var logs = document.getElementById("logs").value;
     var raiderio = document.getElementById("raiderio").value;
     var message = document.getElementById("message").value;
-    var validateFields = validateFields(charname, battletag, classtype, spec, logs, raiderio, message);
+    var validateFields_Var = validateFields(charname, battletag, classtype, spec, logs, raiderio, message);
     
-    // Check if blank then construct params
-    if (validateFields) {
+    // Validate and construct params
+    if (validateFields_Var) {
         var params = {
             username: "Application Received from: " + charname,
             avatar_url: "",
@@ -27,15 +27,15 @@ function sendMessage() {
                 "\n***raider.io:*** " + raiderio +
                 "\n***What attracted you:*** " + message
         }
-        
+
         // Send using JSON
         request.send(JSON.stringify(params));
-        
+
         // Alert user that they submitted
         var sideNav = document.getElementById("doneMsg");
         sideNav.classList.toggle("hiddenContact");
         sideNav.classList.toggle("visibleContact");
-        
+
         // Clear form after so many seconds
         setTimeout(function() {
             sideNav.classList.toggle("hiddenContact");
@@ -51,7 +51,7 @@ function sendMessage() {
 }
 
 function validateFields(charname, battletag, classtype, spec, logs, raiderio, message) {
-    if (charname == "") {
+    if (charname == "") { // Validate Character
         alert("You forgot to fill in your Character Name. Please correct before submitting.");
         document.getElementById("charname").style.background = '#c59393';
         return false;
