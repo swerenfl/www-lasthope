@@ -91,43 +91,36 @@ function sendMessage() {
 function validateFields(charname, battletag, classtype, spec, logs, raiderio, message) {
     var alertvar = "";
     if (charname == "") { // Character Name
-        document.getElementById("charname").style.color = 'white';
         document.getElementById("charname").style.borderColor = '#C59393';
         document.getElementById("charname").style.background = '#C59393';
         alertvar = alertvar + "You forgot to fill in your Character Name. Please correct before submitting." + "<br>";
     }
     if (battletag == "") { // Battle Tag
-        document.getElementById("battletag").style.color = 'white';
         document.getElementById("battletag").style.borderColor = '#C59393';
         document.getElementById("battletag").style.background = '#C59393';
         alertvar = alertvar + "You forgot to fill in your Battle Tag. Please correct before submitting." + "<br>";
     }
     if (classtype == "") { // Class Type
-        document.getElementById("classtype").style.color = 'white';
         document.getElementById("classtype").style.borderColor = '#C59393';
         document.getElementById("classtype").style.background = '#C59393';
         alertvar = alertvar + "You forgot to fill in your Class. Please correct before submitting." + "<br>";
     }
     if (spec == "") { // Specialization
-        document.getElementById("spec").style.color = 'white';
         document.getElementById("spec").style.borderColor = '#C59393';
         document.getElementById("spec").style.background = '#C59393';
         alertvar = alertvar + "You forgot to fill in your Specialization. Please correct before submitting." + "<br>";
     }
     if (logs == "") { // WCL logs
-        document.getElementById("logs").style.color = 'white';
         document.getElementById("logs").style.borderColor = '#C59393';
         document.getElementById("logs").style.background = '#C59393';
         alertvar = alertvar + "You forgot to fill in your Warcraft Logs link. Please correct before submitting." + "<br>";
     }
     if (raiderio == "") { // raider.io link
-        document.getElementById("raiderio").style.color = 'white';
         document.getElementById("raiderio").style.borderColor = '#C59393';
         document.getElementById("raiderio").style.background = '#C59393';
         alertvar = alertvar + "You forgot to fill in your raider.io link. Please correct before submitting." + "<br>";
     }
     if (message == "") { // What attracted you
-        document.getElementById("message").style.color = 'white';
         document.getElementById("message").style.borderColor = '#C59393';
         document.getElementById("message").style.background = '#C59393';
         alertvar = alertvar + "You forgot to fill in what attracted you to Last Hope. Please correct before submitting." + "<br>";
