@@ -11,12 +11,17 @@ function sendMessage() {
     var raiderio = document.getElementById("raiderio").value;
     var message = document.getElementById("message").value;
 
-    checkForm()
-    //if (charname == "" || battletag == "" || classtype == "" || spec == "" || logs == "" || raiderio == "" || message == "") {
-    //    alert("One of the form fields are blank. Please correct.");
-    //    document.getElementById("charname").style.background = 'Red';
-    //    return false;
-    //  }
+    if (charname == "" || battletag == "" || classtype == "" || spec == "" || logs == "" || raiderio == "" || message == "") {
+        alert("One of the form fields are blank. Please correct before submitting.");
+        document.getElementById("charname").style.background = '#c59393';
+        document.getElementById("battletag").style.background = '#c59393';
+        document.getElementById("classtype").style.background = '#c59393';
+        document.getElementById("spec").style.background = '#c59393';
+        document.getElementById("logs").style.background = '#c59393';
+        document.getElementById("raiderio").style.background = '#c59393';
+        document.getElementById("message").style.background = '#c59393';
+        return false;
+      }
 
     var params = {
         username: "Application Received from: " + charname,
@@ -46,11 +51,4 @@ function sendMessage() {
         document.getElementById("raiderio").value = '';
         document.getElementById("message").value = '';
     }, 3000);
-}
-
-function checkForm(){
-    $("input.required").css("border","1px solid #AFAFAF");
-    $("input.required[value=]").css("border-color","red");
-    if($("input.required").val().length<2)return false;
-    return true;
 }
