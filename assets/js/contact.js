@@ -13,7 +13,7 @@ function sendMessage() {
 
     if (charname == "" || battletag == "" || classtype == "" || spec == "" || logs == "" || raiderio == "" || message == "") {
         alert("One of the required fields is blank. Please review");
-        document.charname.style.background = 'Red';
+        document.getElementById("charname").style.background = 'Red';
         return false;
       }
 
