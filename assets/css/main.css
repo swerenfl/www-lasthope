@@ -840,6 +840,7 @@ input, select, textarea {
 
 /* Added by RLS3 on 9/11/20 */
 /* #contactform */
+.grecaptcha-badge { visibility: hidden; }
 .visibleContact {display:block;}
 .hiddenContact {display:none; }
 
