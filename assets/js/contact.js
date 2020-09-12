@@ -55,36 +55,31 @@ function validateFields(charname, battletag, classtype, spec, logs, raiderio, me
         alert("You forgot to fill in your Character Name. Please correct before submitting.");
         document.getElementById("charname").style.background = '#c59393';
         return false;
-    }
-    if (battletag == "") {
+    } else if (battletag == "") {
         alert("You forgot to fill in your Battle Tag. Please correct before submitting.");
         document.getElementById("battletag").style.background = '#c59393';
         return false;
-    }
-    if (classtype == "") {
+    } else if (classtype == "") {
         alert("You forgot to fill in your Class. Please correct before submitting.");
         document.getElementById("classtype").style.background = '#c59393';
         return false;
-    }
-    if (spec == "") {
+    } else if (spec == "") {
         alert("You forgot to fill in your Specialization. Please correct before submitting.");
         document.getElementById("spec").style.background = '#c59393';
         return false;
-    }
-    if (logs == "") {
+    } else if (logs == "") {
         alert("You forgot to fill in your Warcraft Logs link. Please correct before submitting.");
         document.getElementById("logs").style.background = '#c59393';
         return false;
-    }
-    if (raiderio == "") {
+    } else if (raiderio == "") {
         alert("You forgot to fill in your raider.io link. Please correct before submitting.");
         document.getElementById("raiderio").style.background = '#c59393';
         return false;
-    }
-    if (message == "") {
+    } else if (message == "") {
         alert("You forgot to fill in what attracted you to Last Hope. Please correct before submitting.");
         document.getElementById("message").style.background = '#c59393';
         return false;
+    } else {
+        return true;
     }
-    return true;
 }
