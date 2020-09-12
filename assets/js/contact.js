@@ -1,7 +1,10 @@
 function sendMessage() {
+
+    // Construct POSTS
     var request = new XMLHttpRequest();
     request.open("POST", "https://discordapp.com/api/webhooks/753867196190556170/FtWnSZvS-3hXzzC7qwlXoA9JvmqW_TmkBRQkIWRK8dZEAdGPs61Igk_i9IltCaKVaIct");
 
+    // Obtain values from document
     request.setRequestHeader('Content-type', 'application/json');
     var charname = document.getElementById("charname").value;
     var battletag = document.getElementById("battletag").value;
@@ -11,6 +14,7 @@ function sendMessage() {
     var raiderio = document.getElementById("raiderio").value;
     var message = document.getElementById("message").value;
 
+    // Validate fields aren't blank
     if (charname == "" || battletag == "" || classtype == "" || spec == "" || logs == "" || raiderio == "" || message == "") {
         alert("One of the form fields are blank. Please correct before submitting.");
         document.getElementById("charname").style.background = '#c59393';
@@ -21,8 +25,9 @@ function sendMessage() {
         document.getElementById("raiderio").style.background = '#c59393';
         document.getElementById("message").style.background = '#c59393';
         return false;
-      }
+    }
 
+    // Construct params
     var params = {
         username: "Application Received from: " + charname,
         avatar_url: "",
@@ -35,12 +40,15 @@ function sendMessage() {
                     "\n***What attracted you:*** " + message
     }
 
+    // Send using JSON
     request.send(JSON.stringify(params));
 
+    // Alert user that they submitted
     var sideNav = document.getElementById("doneMsg");
     sideNav.classList.toggle("hiddenContact");
     sideNav.classList.toggle("visibleContact");
 
+    // Clear form after so many seconds
     setTimeout(function(){
         sideNav.classList.toggle("hiddenContact");
         document.getElementById("charname").value = '';
