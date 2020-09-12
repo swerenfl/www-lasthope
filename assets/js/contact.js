@@ -11,8 +11,9 @@ function sendMessage() {
     var raiderio = document.getElementById("raiderio").value;
     var message = document.getElementById("message").value;
 
-    if (charname == "") {
-        alert("You must supply your charater's name.");
+    if (charname == "" || battletag == "" || classtype == "" || spec == "" || logs == "" || raiderio == "" || message == "") {
+        alert("One of the required fields is blank. Please review");
+        document.charname.style.background = 'Red';
         return false;
       }
 
@@ -45,11 +46,3 @@ function sendMessage() {
         document.getElementById("message").value = '';
     }, 3000);
 }
-
-function validateForm() {
-    var x = document.forms["myForm"]["fname"].value;
-    if (x == "") {
-      alert("Name must be filled out");
-      return false;
-    }
-  }
