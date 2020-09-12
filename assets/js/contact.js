@@ -32,14 +32,18 @@ function sendMessage() {
                 "\n***What attracted you:*** " + message,
             embeds: [
                     {
-                      "title": "Text formatting how-tos",
+                      "title": "",
                       "color": 4437377,
                       "fields": [
                         {
-                          "name": "Advanced formatting",
-                          "value": "Character Name\n" + "> " + charname + " \
+                          "name": "",
+                          "value": "Character Name\n> " + charname + " \
+                                    \n\nBattleTag\n> " + battletag + " \
                                     \n\nClass\n> " + classtype + " \
-                                    \n\nSpec\n> Hello.\n\nLogs\n> Hello.\n\nraider.io\n> Hello.\n\nSummary\n> Hello."
+                                    \n\nSpec\n> " + spec + " \
+                                    \n\nWCL\n> " + logs + " \
+                                    \n\nraider.io\n> " + raiderio + " \
+                                    \n\nWhat attracted you\n> " + message
                         }
                       ]
                     }
