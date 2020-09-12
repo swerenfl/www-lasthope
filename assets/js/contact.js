@@ -1,12 +1,12 @@
 function onSubmit(token) {
     document.getElementById("submit").submit();
-  }
+}
 
 function sendMessage() {
     // Construct POSTS
     var request = new XMLHttpRequest();
     request.open("POST", "https://discordapp.com/api/webhooks/753867196190556170/FtWnSZvS-3hXzzC7qwlXoA9JvmqW_TmkBRQkIWRK8dZEAdGPs61Igk_i9IltCaKVaIct");
-   
+
     // Obtain values from document
     request.setRequestHeader('Content-type', 'application/json');
     var charname = document.getElementById("charname").value;
@@ -16,28 +16,23 @@ function sendMessage() {
     var logs = document.getElementById("logs").value;
     var raiderio = document.getElementById("raiderio").value;
     var message = document.getElementById("message").value;
+
     var validateFields_Var = validateFields(charname, battletag, classtype, spec, logs, raiderio, message);
-    
+
     // Validate and construct params
     if (validateFields_Var) {
         var params = {
             username: "Application Received from: " + charname,
             avatar_url: "",
-            content: "***Character Name:*** " + charname +
-                "\n***BattleTag:*** " + battletag +
-                "\n***Class:*** " + classtype +
-                "\n***Spec:*** " + spec +
-                "\n***WCL:*** " + logs +
-                "\n***raider.io:*** " + raiderio +
-                "\n***What attracted you:*** " + message,
+            content: "",
             embeds: [
-                    {
-                      "title": "App Received",
-                      "color": 4437377,
-                      "fields": [
+                {
+                    "title": "App Received",
+                    "color": 4437377,
+                    "fields": [
                         {
-                          "name": "App Received",
-                          "value": "Character Name\n> " + charname + " \
+                            "name": "App Received",
+                            "value": "Character Name\n> " + charname + " \
                                     \n\nBattleTag\n> " + battletag + " \
                                     \n\nClass\n> " + classtype + " \
                                     \n\nSpec\n> " + spec + " \
@@ -45,9 +40,9 @@ function sendMessage() {
                                     \n\nraider.io\n> " + raiderio + " \
                                     \n\nWhat attracted you\n> " + message
                         }
-                      ]
-                    }
-                  ]
+                    ]
+                }
+            ]
         }
 
         // Send using JSON
@@ -73,55 +68,71 @@ function sendMessage() {
 }
 
 function validateFields(charname, battletag, classtype, spec, logs, raiderio, message) {
+    console.log('top');
     var alertvar = "";
     if (charname == "") {
-        //alert("You forgot to fill in your Character Name. Please correct before submitting.");
+        document.getElementById("charname").style.color = 'white';
+        document.getElementById("charname").style.borderColor = '#C59393';
         document.getElementById("charname").style.background = '#C59393';
-        alertvar = alertvar + "You forgot to fill in your Character Name. Please correct before submitting.\n";
-        return false;
+
+        alertvar = alertvar + "You forgot to fill in your Character Name. Please correct before submitting." + "<br>";
     }
     if (battletag == "") {
-        //alert("You forgot to fill in your Battle Tag. Please correct before submitting.");
+        document.getElementById("battletag").style.color = 'white';
+        document.getElementById("battletag").style.borderColor = '#C59393';
         document.getElementById("battletag").style.background = '#C59393';
-        alertvar = alertvar + "You forgot to fill in your Battle Tag. Please correct before submitting.\n";
-        return false;
+        alertvar = alertvar + "You forgot to fill in your Battle Tag. Please correct before submitting." + "<br>";
     }
     if (classtype == "") {
-        //alert("You forgot to fill in your Class. Please correct before submitting.");
+        document.getElementById("classtype").style.color = 'white';
+        document.getElementById("classtype").style.borderColor = '#C59393';
         document.getElementById("classtype").style.background = '#C59393';
-        alertvar = alertvar + "You forgot to fill in your Class. Please correct before submitting.\n";
-        return false;
+        alertvar = alertvar + "You forgot to fill in your Class. Please correct before submitting." + "<br>";
     }
     if (spec == "") {
-        //alert("You forgot to fill in your Specialization. Please correct before submitting.");
+        document.getElementById("spec").style.color = 'white';
+        document.getElementById("spec").style.borderColor = '#C59393';
         document.getElementById("spec").style.background = '#C59393';
-        alertvar = alertvar + "You forgot to fill in your Specialization. Please correct before submitting.\n";
-        return false;
+        alertvar = alertvar + "You forgot to fill in your Specialization. Please correct before submitting." + "<br>";
     }
     if (logs == "") {
-        //alert("You forgot to fill in your Warcraft Logs link. Please correct before submitting.");
+        document.getElementById("logs").style.color = 'white';
+        document.getElementById("logs").style.borderColor = '#C59393';
         document.getElementById("logs").style.background = '#C59393';
-        alertvar = alertvar + "You forgot to fill in your Warcraft Logs link. Please correct before submitting.\n";
-        return false;
+        alertvar = alertvar + "You forgot to fill in your Warcraft Logs link. Please correct before submitting." + "<br>";
     }
     if (raiderio == "") {
-        //alert("You forgot to fill in your raider.io link. Please correct before submitting.");
+        document.getElementById("raiderio").style.color = 'white';
+        document.getElementById("raiderio").style.borderColor = '#C59393';
         document.getElementById("raiderio").style.background = '#C59393';
-        alertvar = alertvar + "You forgot to fill in your raider.io link. Please correct before submitting.\n";
-        return false;
+        alertvar = alertvar + "You forgot to fill in your raider.io link. Please correct before submitting." + "<br>";
     }
     if (message == "") {
-        //alert("You forgot to fill in what attracted you to Last Hope. Please correct before submitting.");
+        document.getElementById("message").style.color = 'white';
+        document.getElementById("message").style.borderColor = '#C59393';
         document.getElementById("message").style.background = '#C59393';
-        alertvar = alertvar + "You forgot to fill in what attracted you to Last Hope. Please correct before submitting.\n";
-        return false;
+        alertvar = alertvar + "You forgot to fill in what attracted you to Last Hope. Please correct before submitting." + "<br>";
     }
+    var sideNav = document.getElementById("doneMsg");
     if (alertvar != "") {
+        console.log('inside alert logic');
         document.getElementById("doneMsg").innerHTML = "";
-        var sideNav = document.getElementById("doneMsg");
-        sideNav.classList.toggle("hiddenContact");
-        sideNav.classList.toggle("visibleContact");
+        sideNav.classList.remove("hiddenContact");
+        sideNav.classList.add("visibleContact");
         document.getElementById("doneMsg").innerHTML = alertvar;
+        document.getElementById("doneMsg").style.color = '#C59393';
+        return false;
+    } else {
+        sideNav.classList.remove("visibleContact");
+        sideNav.classList.add("hiddenContact");
+        document.getElementById("doneMsg").style.color = '#98c593';
+        document.getElementById("doneMsg").innerHTML = "Message Sent!";
+        return true;
     }
-    return true;
+}
+
+function clearInput(id) {
+    document.getElementById(id).style.color = 'black';
+    document.getElementById(id).style.background = 'white';
+    document.getElementById(id).style.borderColor = 'gray';
 }
