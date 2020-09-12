@@ -115,16 +115,14 @@
 							<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.</p>
 						</header>
 						<div class="box">
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field half"><input type="text" name="name" placeholder="Name" /></div>
-									<div class="field half"><input type="email" name="email" placeholder="Email" /></div>
-									<div class="field"><textarea name="message" placeholder="Message" rows="6"></textarea></div>
-								</div>
-								<ul class="actions special">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</form>
+							<div class="fields">
+								<div class="field half"><input id="name" type="text" name="name" placeholder="Name" /></div>
+								<div class="field half"><input id="email" type="email" name="email" placeholder="Email" /></div>
+								<div class="field"><textarea id="message" name="message" placeholder="Message" rows="6"></textarea></div>
+						</div>
+						<ul class="actions special">
+							<li><button onclick="sendMessage()">Send Message</button></li>
+						</ul>
 						</div>
 					</div>
 				</section>
@@ -158,7 +156,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script src="assets/js/google_script_form_ajax.js"></script>
+			<script src="assets/js/contact.js"></script>
 
 	</body>
 </html>
