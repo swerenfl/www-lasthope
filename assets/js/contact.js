@@ -14,13 +14,13 @@ function sendMessage() {
     var params = {
         username: "Application Received from: " + charname,
         avatar_url: "",
-        content: "Character Name: " + charname + 
-                    "\nBattleTag: " + battletag +
-                    "\nClass: " + classtype +
-                    "\nSpec: " + spec +
-                    "\nWCL: " + logs +
-                    "\nraider.io: " + raiderio +
-                    "\nWhat attracted you: " + message
+        content: "***Character Name:*** " + charname + 
+                    "\n***BattleTag:*** " + battletag +
+                    "\n***Class:*** " + classtype +
+                    "\n***Spec:*** " + spec +
+                    "\n***WCL:*** " + logs +
+                    "\n***raider.io:*** " + raiderio +
+                    "\n***What attracted you:*** " + message
     }
 
     request.send(JSON.stringify(params));
