@@ -1,8 +1,11 @@
+// reCAPTCHA v3 function 
 function onSubmit(token) {
     document.getElementById("submit").submit();
 }
 
+// sendMessage function called on the Contact Form
 function sendMessage() {
+
     // Construct POSTS
     var request = new XMLHttpRequest();
     request.open("POST", "https://discordapp.com/api/webhooks/753867196190556170/FtWnSZvS-3hXzzC7qwlXoA9JvmqW_TmkBRQkIWRK8dZEAdGPs61Igk_i9IltCaKVaIct");
@@ -16,7 +19,6 @@ function sendMessage() {
     var logs = document.getElementById("logs").value;
     var raiderio = document.getElementById("raiderio").value;
     var message = document.getElementById("message").value;
-
     var validateFields_Var = validateFields(charname, battletag, classtype, spec, logs, raiderio, message);
 
     // Validate and construct params
@@ -25,7 +27,7 @@ function sendMessage() {
             username: "Last Hope Guild Website Bot",
             avatar_url: "https://lasthopeguild.com",
             content: "",
-            "embeds": [
+            embeds: [
                 {
                   "title": "Application Received from: " + charname,
                   "color": 4437377,
@@ -85,53 +87,53 @@ function sendMessage() {
     }
 }
 
+// Validate that the fields are filled in
 function validateFields(charname, battletag, classtype, spec, logs, raiderio, message) {
-    console.log('top');
     var alertvar = "";
-    if (charname == "") {
-        //alert("You forgot to fill in your Character Name. Please correct before submitting.");
+    if (charname == "") { // Character Name
         document.getElementById("charname").style.color = 'white';
         document.getElementById("charname").style.borderColor = '#C59393';
         document.getElementById("charname").style.background = '#C59393';
-
         alertvar = alertvar + "You forgot to fill in your Character Name. Please correct before submitting." + "<br>";
     }
-    if (battletag == "") {
+    if (battletag == "") { // Battle Tag
         document.getElementById("battletag").style.color = 'white';
         document.getElementById("battletag").style.borderColor = '#C59393';
         document.getElementById("battletag").style.background = '#C59393';
         alertvar = alertvar + "You forgot to fill in your Battle Tag. Please correct before submitting." + "<br>";
     }
-    if (classtype == "") {
+    if (classtype == "") { // Class Type
         document.getElementById("classtype").style.color = 'white';
         document.getElementById("classtype").style.borderColor = '#C59393';
         document.getElementById("classtype").style.background = '#C59393';
         alertvar = alertvar + "You forgot to fill in your Class. Please correct before submitting." + "<br>";
     }
-    if (spec == "") {
+    if (spec == "") { // Specialization
         document.getElementById("spec").style.color = 'white';
         document.getElementById("spec").style.borderColor = '#C59393';
         document.getElementById("spec").style.background = '#C59393';
         alertvar = alertvar + "You forgot to fill in your Specialization. Please correct before submitting." + "<br>";
     }
-    if (logs == "") {
+    if (logs == "") { // WCL logs
         document.getElementById("logs").style.color = 'white';
         document.getElementById("logs").style.borderColor = '#C59393';
         document.getElementById("logs").style.background = '#C59393';
         alertvar = alertvar + "You forgot to fill in your Warcraft Logs link. Please correct before submitting." + "<br>";
     }
-    if (raiderio == "") {
+    if (raiderio == "") { // raider.io link
         document.getElementById("raiderio").style.color = 'white';
         document.getElementById("raiderio").style.borderColor = '#C59393';
         document.getElementById("raiderio").style.background = '#C59393';
         alertvar = alertvar + "You forgot to fill in your raider.io link. Please correct before submitting." + "<br>";
     }
-    if (message == "") {
+    if (message == "") { // What attracted you
         document.getElementById("message").style.color = 'white';
         document.getElementById("message").style.borderColor = '#C59393';
         document.getElementById("message").style.background = '#C59393';
         alertvar = alertvar + "You forgot to fill in what attracted you to Last Hope. Please correct before submitting." + "<br>";
     }
+
+    // Show alerts and/or clear alerts based on content
     var sideNav = document.getElementById("doneMsg");
     if (alertvar != "") {
         console.log('inside alert logic');
@@ -141,34 +143,33 @@ function validateFields(charname, battletag, classtype, spec, logs, raiderio, me
         document.getElementById("doneMsg").innerHTML = alertvar;
         document.getElementById("doneMsg").style.color = '#C59393';
         return false;
-    } else {
+    } 
+    else {
         sideNav.classList.remove("visibleContact");
         sideNav.classList.add("hiddenContact");
         document.getElementById("doneMsg").style.color = '#98c593';
         document.getElementById("doneMsg").innerHTML = "Message Sent!";
         return true;
     }
-
-
 }
 
+// Clear Input function
 function clearInput(id) {
     document.getElementById(id).style.color = 'black';
     document.getElementById(id).style.background = 'white';
     document.getElementById(id).style.borderColor = 'gray';
 }
 
+// Field listeners
 var textarea = document.querySelector("textarea");
-
 textarea.addEventListener("input", function() {
     var maxlength = this.getAttribute("maxlength");
     var currentLength = this.value.length;
 
     if (currentLength >= maxlength) {
         document.getElementById("textAreaCount").innerHTML = "You have reached the maximum number of characters.";
-        //console.log("You have reached the maximum number of characters.");
-    } else {
+    } 
+    else {
         document.getElementById("textAreaCount").innerHTML = maxlength - currentLength + "/" + maxlength + " Chars left";
-        //console.log(maxlength - currentLength + " chars left");
     }
 });
