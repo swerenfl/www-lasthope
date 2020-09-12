@@ -11,6 +11,11 @@ function sendMessage() {
     var raiderio = document.getElementById("raiderio").value;
     var message = document.getElementById("message").value;
 
+    if (charname == "") {
+        alert("You must supply your charater's name.");
+        return false;
+      }
+
     var params = {
         username: "Application Received from: " + charname,
         avatar_url: "",
@@ -40,3 +45,11 @@ function sendMessage() {
         document.getElementById("message").value = '';
     }, 3000);
 }
+
+function validateForm() {
+    var x = document.forms["myForm"]["fname"].value;
+    if (x == "") {
+      alert("Name must be filled out");
+      return false;
+    }
+  }
