@@ -55,35 +55,55 @@ function sendMessage() {
 }
 
 function validateFields(charname, battletag, classtype, spec, logs, raiderio, message) {
-    if (charname == "") { // Validate Character
-        alert("You forgot to fill in your Character Name. Please correct before submitting.");
-        document.getElementById("charname").style.background = '#c59393';
+    var alertvar = "";
+    if (charname == "") {
+        //alert("You forgot to fill in your Character Name. Please correct before submitting.");
+        document.getElementById("charname").style.background = '#C59393';
+        alertvar = alertvar + "You forgot to fill in your Character Name. Please correct before submitting.\n";
         return false;
-    } else if (battletag == "") {
-        alert("You forgot to fill in your Battle Tag. Please correct before submitting.");
-        document.getElementById("battletag").style.background = '#c59393';
-        return false;
-    } else if (classtype == "") {
-        alert("You forgot to fill in your Class. Please correct before submitting.");
-        document.getElementById("classtype").style.background = '#c59393';
-        return false;
-    } else if (spec == "") {
-        alert("You forgot to fill in your Specialization. Please correct before submitting.");
-        document.getElementById("spec").style.background = '#c59393';
-        return false;
-    } else if (logs == "") {
-        alert("You forgot to fill in your Warcraft Logs link. Please correct before submitting.");
-        document.getElementById("logs").style.background = '#c59393';
-        return false;
-    } else if (raiderio == "") {
-        alert("You forgot to fill in your raider.io link. Please correct before submitting.");
-        document.getElementById("raiderio").style.background = '#c59393';
-        return false;
-    } else if (message == "") {
-        alert("You forgot to fill in what attracted you to Last Hope. Please correct before submitting.");
-        document.getElementById("message").style.background = '#c59393';
-        return false;
-    } else {
-        return true;
     }
+    if (battletag == "") {
+        //alert("You forgot to fill in your Battle Tag. Please correct before submitting.");
+        document.getElementById("battletag").style.background = '#C59393';
+        alertvar = alertvar + "You forgot to fill in your Battle Tag. Please correct before submitting.\n";
+        return false;
+    }
+    if (classtype == "") {
+        //alert("You forgot to fill in your Class. Please correct before submitting.");
+        document.getElementById("classtype").style.background = '#C59393';
+        alertvar = alertvar + "You forgot to fill in your Class. Please correct before submitting.\n";
+        return false;
+    }
+    if (spec == "") {
+        //alert("You forgot to fill in your Specialization. Please correct before submitting.");
+        document.getElementById("spec").style.background = '#C59393';
+        alertvar = alertvar + "You forgot to fill in your Specialization. Please correct before submitting.\n";
+        return false;
+    }
+    if (logs == "") {
+        //alert("You forgot to fill in your Warcraft Logs link. Please correct before submitting.");
+        document.getElementById("logs").style.background = '#C59393';
+        alertvar = alertvar + "You forgot to fill in your Warcraft Logs link. Please correct before submitting.\n";
+        return false;
+    }
+    if (raiderio == "") {
+        //alert("You forgot to fill in your raider.io link. Please correct before submitting.");
+        document.getElementById("raiderio").style.background = '#C59393';
+        alertvar = alertvar + "You forgot to fill in your raider.io link. Please correct before submitting.\n";
+        return false;
+    }
+    if (message == "") {
+        //alert("You forgot to fill in what attracted you to Last Hope. Please correct before submitting.");
+        document.getElementById("message").style.background = '#C59393';
+        alertvar = alertvar + "You forgot to fill in what attracted you to Last Hope. Please correct before submitting.\n";
+        return false;
+    }
+    if (alertvar != "") {
+        document.getElementById("doneMsg").innerHTML = "";
+        var sideNav = document.getElementById("doneMsg");
+        sideNav.classList.toggle("hiddenContact");
+        sideNav.classList.toggle("visibleContact");
+        document.getElementById("doneMsg").innerHTML = alertvar;
+    }
+    return true;
 }
