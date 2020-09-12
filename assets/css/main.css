@@ -968,7 +968,7 @@ form>.fields>.field.quarter {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     width: calc(100% + 3em);
-    margin: -1.5em 0 2em -1.5em;
+    margin: -1.5em 0 0em -1.5em;
 }
 
 #contactform>.fields>.field {
@@ -2486,4 +2486,9 @@ body.is-touch .main {
     #contact .box {
         padding: 1em 1em 2em 1em;
     }
+}
+
+.countMsg {
+    text-align: right;
+    font-size: 12px;
 }

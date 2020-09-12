@@ -89,6 +89,7 @@ function validateFields(charname, battletag, classtype, spec, logs, raiderio, me
     console.log('top');
     var alertvar = "";
     if (charname == "") {
+        //alert("You forgot to fill in your Character Name. Please correct before submitting.");
         document.getElementById("charname").style.color = 'white';
         document.getElementById("charname").style.borderColor = '#C59393';
         document.getElementById("charname").style.background = '#C59393';
@@ -147,6 +148,8 @@ function validateFields(charname, battletag, classtype, spec, logs, raiderio, me
         document.getElementById("doneMsg").innerHTML = "Message Sent!";
         return true;
     }
+
+
 }
 
 function clearInput(id) {
@@ -154,3 +157,18 @@ function clearInput(id) {
     document.getElementById(id).style.background = 'white';
     document.getElementById(id).style.borderColor = 'gray';
 }
+
+var textarea = document.querySelector("textarea");
+
+textarea.addEventListener("input", function() {
+    var maxlength = this.getAttribute("maxlength");
+    var currentLength = this.value.length;
+
+    if (currentLength >= maxlength) {
+        document.getElementById("textAreaCount").innerHTML = "You have reached the maximum number of characters.";
+        //console.log("You have reached the maximum number of characters.");
+    } else {
+        document.getElementById("textAreaCount").innerHTML = maxlength - currentLength + "/" + maxlength + " Chars left";
+        //console.log(maxlength - currentLength + " chars left");
+    }
+});
