@@ -838,19 +838,17 @@ input, select, textarea {
 
 		}
 
-
-
-/* #contact */
-
-#contact {
+/* #contactform */
+/* Added by RLS3 on 9/11/20 */
+#contactform {
   margin: 0 0 2em 0;
 }
 
-  #contact > :last-child {
+  #contactform > :last-child {
     margin-bottom: 0;
   }
 
-  #contact > .fields {
+  #contactform > .fields {
     display: -moz-flex;
     display: -webkit-flex;
     display: -ms-flex;
@@ -863,8 +861,7 @@ input, select, textarea {
     margin: -1.5em 0 2em -1.5em;
   }
 
-	/* Added by RLS3 on 9/11/20 */
-    #contact > .fields > .field {
+    #contactform > .fields > .field {
       -moz-flex-grow: 0;
       -webkit-flex-grow: 0;
       -ms-flex-grow: 0;
@@ -877,39 +874,39 @@ input, select, textarea {
       width: calc(100% - 1.5em);
     }
 
-      #contact > .fields > .field.half {
+      #contactform > .fields > .field.half {
         width: calc(50% - 0.75em);
       }
 
-      #contact > .fields > .field.third {
+      #contactform > .fields > .field.third {
         width: calc(100%/3 - 0.5em);
       }
 
-      #contact > .fields > .field.quarter {
+      #contactform > .fields > .field.quarter {
         width: calc(25% - 0.375em);
       }
 
   @media screen and (max-width: 480px) {
 
-    #contact > .fields {
+    #contactform > .fields {
       width: calc(100% + 2em);
       margin: -1em 0 2em -1em;
     }
 
-      #contact > .fields > .field {
+      #contactform > .fields > .field {
         padding: 1em 0 0 1em;
         width: calc(100% - 1em);
       }
 
-        #contact > .fields > .field.half {
+        #contactform > .fields > .field.half {
           width: calc(100% - 1em);
         }
 
-        #contact > .fields > .field.third {
+        #contactform > .fields > .field.third {
           width: calc(100% - 1em);
         }
 
-        #contact > .fields > .field.quarter {
+        #contactform > .fields > .field.quarter {
           width: calc(100% - 1em);
         }
 
