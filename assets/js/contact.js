@@ -11,11 +11,12 @@ function sendMessage() {
     var raiderio = document.getElementById("raiderio").value;
     var message = document.getElementById("message").value;
 
-    if (charname == "" || battletag == "" || classtype == "" || spec == "" || logs == "" || raiderio == "" || message == "") {
-        alert("One of the required fields is blank. Please review");
-        document.getElementById("charname").style.background = 'Red';
-        return false;
-      }
+    checkForm()
+    //if (charname == "" || battletag == "" || classtype == "" || spec == "" || logs == "" || raiderio == "" || message == "") {
+    //    alert("One of the form fields are blank. Please correct.");
+    //    document.getElementById("charname").style.background = 'Red';
+    //    return false;
+    //  }
 
     var params = {
         username: "Application Received from: " + charname,
@@ -45,4 +46,11 @@ function sendMessage() {
         document.getElementById("raiderio").value = '';
         document.getElementById("message").value = '';
     }, 3000);
+}
+
+function checkForm(){
+    $("input.required").css("border","1px solid #AFAFAF");
+    $("input.required[value=]").css("border-color","red");
+    if($("input.required").val().length<2)return false;
+    return true;
 }
