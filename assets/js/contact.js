@@ -3,14 +3,24 @@ function sendMessage() {
     request.open("POST", "https://discordapp.com/api/webhooks/753867196190556170/FtWnSZvS-3hXzzC7qwlXoA9JvmqW_TmkBRQkIWRK8dZEAdGPs61Igk_i9IltCaKVaIct");
 
     request.setRequestHeader('Content-type', 'application/json');
-    var name = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
+    var charname = document.getElementById("charname").value;
+    var battletag = document.getElementById("battletag").value;
+    var classtype = document.getElementById("classtype").value;
+    var spec = document.getElementById("spec").value;
+    var logs = document.getElementById("logs").value;
+    var raiderio = document.getElementById("raiderio").value;
     var message = document.getElementById("message").value;
 
     var params = {
-        username: "Application Received from: " + name,
+        username: "Application Received from: " + charname,
         avatar_url: "",
-        content: "From: " + name + "\nMessage: " + message
+        content: "Character Name: " + charname + 
+                    "\nBattleTag: " + battletag +
+                    "\nClass: " + classtype +
+                    "\nSpec: " + spec +
+                    "\nWCL: " + logs +
+                    "\nraider.io: " + raiderio +
+                    "\nWhat attracted you: " + message
     }
 
     request.send(JSON.stringify(params));
@@ -21,8 +31,12 @@ function sendMessage() {
 
     setTimeout(function(){
         sideNav.classList.toggle("hiddenContact");
-        document.getElementById("name").value = '';
-        document.getElementById("email").value = '';
+        document.getElementById("charname").value = '';
+        document.getElementById("battletag").value = '';
+        document.getElementById("classtype").value = '';
+        document.getElementById("spec").value = '';
+        document.getElementById("logs").value = '';
+        document.getElementById("raiderio").value = '';
         document.getElementById("message").value = '';
-    }, 5000);
+    }, 3000);
 }
