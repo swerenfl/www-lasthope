@@ -838,8 +838,11 @@ input, select, textarea {
 
 		}
 
-/* #contactform */
 /* Added by RLS3 on 9/11/20 */
+/* #contactform */
+.visibleContact { transform: translateX(0); -webkit-transition: 0.5s; }
+.hiddenContact { transform: translateX(-100%); -webkit-transition: 0.5s; }
+
 #contactform {
   margin: 0 0 2em 0;
 }
@@ -910,7 +913,7 @@ input, select, textarea {
           width: calc(100% - 1em);
         }
 
-  }
+	}
 
 	label {
 		display: block;

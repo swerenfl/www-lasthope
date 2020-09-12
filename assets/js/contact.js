@@ -14,4 +14,15 @@ function sendMessage() {
     }
 
     request.send(JSON.stringify(params));
+
+    var sideNav = document.getElementById("doneMsg");
+    sideNav.classList.toggle("hiddenContact");
+    sideNav.classList.toggle("visibleContact");
+
+    setTimeout(function(){
+        sideNav.classList.toggle("hiddenContact");
+        document.getElementById("name").value = '';
+        document.getElementById("email").value = '';
+        document.getElementById("message").value = '';
+    }, 5000);
 }
