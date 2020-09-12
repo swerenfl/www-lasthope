@@ -37,8 +37,8 @@ function sendMessage() {
                       "fields": [
                         {
                           "name": "Advanced formatting",
-                          "value": "Character Name\n" + ">" + charname + " \
-                                    \n\nClass\n>" + classtype + " \
+                          "value": "Character Name\n" + "> " + charname + " \
+                                    \n\nClass\n> " + classtype + " \
                                     \n\nSpec\n> Hello.\n\nLogs\n> Hello.\n\nraider.io\n> Hello.\n\nSummary\n> Hello."
                         }
                       ]
