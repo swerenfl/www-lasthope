@@ -32,11 +32,11 @@ function sendMessage() {
                 "\n***What attracted you:*** " + message,
             embeds: [
                     {
-                      "title": "",
+                      "title": "App Received",
                       "color": 4437377,
                       "fields": [
                         {
-                          "name": "",
+                          "name": "App Received",
                           "value": "Character Name\n> " + charname + " \
                                     \n\nBattleTag\n> " + battletag + " \
                                     \n\nClass\n> " + classtype + " \
