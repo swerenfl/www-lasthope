@@ -25,22 +25,40 @@ function sendMessage() {
             username: "Application Received from: " + charname,
             avatar_url: "",
             content: "",
-            embeds: [
+            "embeds": [
                 {
-                    "title": "App Received",
-                    "color": 4437377,
-                    "fields": [
-                        {
-                            "name": "App Received",
-                            "value": "Character Name\n> " + charname + " \
-                                    \n\nBattleTag\n> " + battletag + " \
-                                    \n\nClass\n> " + classtype + " \
-                                    \n\nSpec\n> " + spec + " \
-                                    \n\nWCL\n> " + logs + " \
-                                    \n\nraider.io\n> " + raiderio + " \
-                                    \n\nWhat attracted you\n> " + message
-                        }
-                    ]
+                  "title": "Application Received from Gluteas",
+                  "color": 4437377,
+                  "fields": [
+                    {
+                        "name": "Character Name",
+                        "value": "> " + charname
+                    },
+                    {
+                        "name": "BattleTag",
+                        "value": "> " + battletag
+                    },
+                    {
+                        "name": "Class",
+                        "value": "> " + classtype
+                    },
+                    {
+                        "name": "Specialization",
+                        "value": "> " + spec
+                    },
+                    {
+                        "name": "WCL",
+                        "value": "> " + logs
+                    },
+                    {
+                        "name": "raider.io",
+                        "value": "> " + raiderio
+                    },
+                    {
+                        "name": "What attracted you to Last Hope",
+                        "value": "> " + message
+                    }
+                  ]
                 }
             ]
         }
