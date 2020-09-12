@@ -623,7 +623,7 @@ input, select, textarea {
 	.box {
 		background: #ffffff;
 		color: #39454b;
-		padding: 2em 2em 5px 2em; /* Modified by RLS3 on 9/12/20 */
+		padding: 2em;
 	}
 
 		.box > :last-child {
@@ -637,7 +637,7 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			.box {
-				padding: 1em 1em 5px 1em; /* Modified by RLS3 on 9/12/20 */
+				padding: 1em;
 			}
 
 				.box.style2 {
@@ -845,7 +845,7 @@ input, select, textarea {
 .hiddenContact {display:none; }
 
 #contactform {
-  margin: 0 0 2em 0;
+  margin: 0;
 }
 
   #contactform > :last-child {
