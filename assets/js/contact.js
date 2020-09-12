@@ -29,7 +29,19 @@ function sendMessage() {
                 "\n***Spec:*** " + spec +
                 "\n***WCL:*** " + logs +
                 "\n***raider.io:*** " + raiderio +
-                "\n***What attracted you:*** " + message
+                "\n***What attracted you:*** " + message,
+            embeds: [
+                    {
+                      "title": "Text formatting how-tos",
+                      "color": 4437377,
+                      "fields": [
+                        {
+                          "name": "Advanced formatting",
+                          "value": "Character Name\n> Hello.\n\nClass\n> Hello.\n\nSpec\n> Hello.\n\nLogs\n> Hello.\n\nraider.io\n> Hello.\n\nSummary\n> Hello."
+                        }
+                      ]
+                    }
+                  ]
         }
 
         // Send using JSON
