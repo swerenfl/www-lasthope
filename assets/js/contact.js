@@ -1,3 +1,7 @@
+function onSubmit(token) {
+    document.getElementById("submit").submit();
+  }
+
 function sendMessage() {
     // Construct POSTS
     var request = new XMLHttpRequest();
