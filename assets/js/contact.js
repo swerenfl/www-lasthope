@@ -8,9 +8,9 @@ function sendMessage() {
     var message = document.getElementById("message").value;
 
     var params = {
-        username: "User Test",
+        username: "Application Received from: " + name,
         avatar_url: "",
-        content: "From: " + name + ", Message:" + message
+        content: "From: " + name + "\nMessage: " + message
     }
 
     request.send(JSON.stringify(params));
