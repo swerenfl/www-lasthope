@@ -14,7 +14,7 @@ function sendMessage() {
     var raiderio = document.getElementById("raiderio").value;
     var message = document.getElementById("message").value;
 
-    validateFields();
+    validateFields(charname, battletag, classtype, spec, logs, raiderio, message);
 
     // Construct params
     var params = {
@@ -50,10 +50,11 @@ function sendMessage() {
     }, 3000);
 }
 
-function validateFields() {
+function validateFields(charname, battletag, classtype, spec, logs, raiderio, message) {
+
     if (charname == "") {
         alert("You forgot to fill in your Character Name. Please correct before submitting.");
-        document.getElementById("charname").style.background = '#c59393';
+        charname.style.background = '#c59393';
         return false;
     }
     if (battletag == "") {
