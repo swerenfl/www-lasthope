@@ -22,12 +22,12 @@ function sendMessage() {
     // Validate and construct params
     if (validateFields_Var) {
         var params = {
-            username: "Application Received from: " + charname,
-            avatar_url: "",
+            username: "Last Hope Guild Website Bot",
+            avatar_url: "https://lasthopeguild.com",
             content: "",
             "embeds": [
                 {
-                  "title": "Application Received from Gluteas",
+                  "title": "Application Received from: " + charname,
                   "color": 4437377,
                   "fields": [
                     {
