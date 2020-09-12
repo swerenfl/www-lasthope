@@ -499,7 +499,7 @@ input, select, textarea {
 
 /* Type */
 
-	body, input, textarea, select {
+	body, input, textarea, select, button { /* Added button here RLS3 */
 		font-family: "Source Sans Pro", "sans-serif";
 		font-weight: 300;
 		font-size: 18pt;
@@ -510,7 +510,7 @@ input, select, textarea {
 
 		@media screen and (max-width: 1920px) {
 
-			body, input, textarea, select {
+			body, input, textarea, select, button { /* Added button here RLS3 */
 				font-size: 17pt;
 			}
 
@@ -518,7 +518,7 @@ input, select, textarea {
 
 		@media screen and (max-width: 1680px) {
 
-			body, input, textarea, select {
+			body, input, textarea, select, button { /* Added button here RLS3 */
 				font-size: 15pt;
 			}
 
@@ -526,7 +526,7 @@ input, select, textarea {
 
 		@media screen and (max-width: 1280px) {
 
-			body, input, textarea, select {
+			body, input, textarea, select, button { /* Added button here RLS3 */
 				font-size: 13pt;
 			}
 
@@ -534,7 +534,7 @@ input, select, textarea {
 
 		@media screen and (max-width: 1000px) {
 
-			body, input, textarea, select {
+			body, input, textarea, select, button { /* Added button here RLS3 */
 				font-size: 13pt;
 			}
 
@@ -542,7 +542,7 @@ input, select, textarea {
 
 		@media screen and (max-width: 736px) {
 
-			body, input, textarea, select {
+			body, input, textarea, select, button { /* Added button here RLS3 */
 				font-size: 12pt;
 				line-height: 1.5em;
 			}
