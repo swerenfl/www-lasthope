@@ -54,7 +54,7 @@ function validateFields(charname, battletag, classtype, spec, logs, raiderio, me
 
     if (charname == "") {
         alert("You forgot to fill in your Character Name. Please correct before submitting.");
-        charname.style.background = '#c59393';
+        document.getElementById("charname").style.background = '#c59393';
         return false;
     }
     if (battletag == "") {
