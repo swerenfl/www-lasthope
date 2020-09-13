@@ -8,7 +8,7 @@ function sendMessage() {
 
     // Construct POSTS
     var request = new XMLHttpRequest();
-    request.open("POST", "https://discordapp.com/api/webhooks/753867196190556170/FtWnSZvS-3hXzzC7qwlXoA9JvmqW_TmkBRQkIWRK8dZEAdGPs61Igk_i9IltCaKVaIct");
+    request.open("POST", "https://discordapp.com/api/webhooks/754529916833366097/qvvlv3jgKazrlMl4HFGTGPx7eVIF0Zf-xkCztZuouC6oTFCDsHav5kCbhXhmQEBw2pdw");
 
     // Obtain values from document
     request.setRequestHeader('Content-type', 'application/json');
