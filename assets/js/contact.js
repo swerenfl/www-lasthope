@@ -25,7 +25,7 @@ function sendMessage() {
     if (validateFields_Var) {
         var params = {
             username: "Application Received from: " + charname,
-            avatar_url: "https://lasthopeguild.com",
+            avatar_url: "https://lasthopeguild.com/favicon.png",
             content: "",
             embeds: [
                 {
