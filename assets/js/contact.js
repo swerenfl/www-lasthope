@@ -14,12 +14,12 @@ function sendMessage() {
     request.setRequestHeader('Content-type', 'application/json');
     var charname = document.getElementById("charname").value;
     var battletag = document.getElementById("battletag").value;
-    var classtype = document.getElementById("classtype").value;
+    var discord = document.getElementById("discord").value;
     var spec = document.getElementById("spec").value;
     var logs = document.getElementById("logs").value;
     var raiderio = document.getElementById("raiderio").value;
     var message = document.getElementById("message").value;
-    var validateFields_Var = validateFields(charname, battletag, classtype, spec, logs, raiderio, message);
+    var validateFields_Var = validateFields(charname, battletag, discord, spec, logs, raiderio, message);
 
     // Validate and construct params
     if (validateFields_Var) {
@@ -37,15 +37,15 @@ function sendMessage() {
                         "value": "> " + charname
                     },
                     {
-                        "name": "BattleTag",
+                        "name": "Battle Tag",
                         "value": "> " + battletag
                     },
                     {
-                        "name": "Class",
-                        "value": "> " + classtype
+                        "name": "Discord Tag",
+                        "value": "> " + discord
                     },
                     {
-                        "name": "Specialization",
+                        "name": "Class & Specialization",
                         "value": "> " + spec
                     },
                     {
@@ -78,7 +78,7 @@ function sendMessage() {
             sideNav.classList.toggle("hiddenContact");
             document.getElementById("charname").value = '';
             document.getElementById("battletag").value = '';
-            document.getElementById("classtype").value = '';
+            document.getElementById("discord").value = '';
             document.getElementById("spec").value = '';
             document.getElementById("logs").value = '';
             document.getElementById("raiderio").value = '';
@@ -88,7 +88,7 @@ function sendMessage() {
 }
 
 // Validate that the fields are filled in
-function validateFields(charname, battletag, classtype, spec, logs, raiderio, message) {
+function validateFields(charname, battletag, discord, spec, logs, raiderio, message) {
     var alertvar = "";
     if (charname == "") { // Character Name
         document.getElementById("charname").style.borderColor = '#C59393';
@@ -100,10 +100,10 @@ function validateFields(charname, battletag, classtype, spec, logs, raiderio, me
         document.getElementById("battletag").style.background = '#C59393';
         alertvar = alertvar + "You forgot to fill in your Battle Tag. Please correct before submitting." + "<br>";
     }
-    if (classtype == "") { // Class Type
-        document.getElementById("classtype").style.borderColor = '#C59393';
-        document.getElementById("classtype").style.background = '#C59393';
-        alertvar = alertvar + "You forgot to fill in your Class. Please correct before submitting." + "<br>";
+    if (discord == "") { // Discord Tag
+        document.getElementById("discord").style.borderColor = '#C59393';
+        document.getElementById("discord").style.background = '#C59393';
+        alertvar = alertvar + "You forgot to fill in your Discord Tag. Please correct before submitting." + "<br>";
     }
     if (spec == "") { // Specialization
         document.getElementById("spec").style.borderColor = '#C59393';
