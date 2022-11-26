@@ -33,23 +33,23 @@ function sendMessage() {
                   "components": [
                     {
                       "style": 3,
-                      "label": `Good`,
-                      "custom_id": `row_0_button_0`,
+                      "label": "Good",
+                      "custom_id": "row_0_button_0",
                       "disabled": false,
                       "emoji": {
                         "id": null,
-                        "name": `👍`
+                        "name": "👍"
                       },
                       "type": 2
                     },
                     {
                       "style": 4,
-                      "label": `Bad`,
-                      "custom_id": `row_0_button_1`,
+                      "label": "Bad",
+                      "custom_id": "row_0_button_1",
                       "disabled": false,
                       "emoji": {
                         "id": null,
-                        "name": `👎`
+                        "name": "👎"
                       },
                       "type": 2
                     }
