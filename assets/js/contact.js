@@ -38,10 +38,6 @@ function sendMessage() {
                       "label": "Good",
                       "custom_id": "row_0_button_0",
                       "disabled": false,
-                      "emoji": {
-                        "id": null,
-                        "name": "👍"
-                      },
                       "type": 2
                     },
                     {
@@ -49,10 +45,6 @@ function sendMessage() {
                       "label": "Bad",
                       "custom_id": "row_0_button_1",
                       "disabled": false,
-                      "emoji": {
-                        "id": null,
-                        "name": "👎"
-                      },
                       "type": 2
                     }
                   ]
