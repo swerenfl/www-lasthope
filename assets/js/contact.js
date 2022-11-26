@@ -96,8 +96,9 @@ function sendMessage() {
 
         // Send using JSON
         request.send(JSON.stringify(params));
-        request.send(JSON.stringify(params)).then(embedMessage => {
-            embedMessage.react("👍");
+        request.send(JSON.stringify(params)).then(async embedMessage => {
+            await embedMessage.react("👍");
+            await embedMessage.react("👎");
         })
 
         // Alert user that they submitted
