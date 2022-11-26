@@ -5,7 +5,7 @@ function onSubmit(token) {
 
 // get timestamp
 function getCurrentTimestamp () {
-    return Date.utcnow().isoformat()
+    return Date.now()
   }
 
 // sendMessage function called on the Contact Form
@@ -25,7 +25,7 @@ function sendMessage() {
     var raiderio = document.getElementById("raiderio").value;
     var message = document.getElementById("message").value;
     var validateFields_Var = validateFields(charname, battletag, discord, spec, logs, raiderio, message);
-    var timeisnow = getCurrentTimestamp()
+    var timeisnow = getCurrentTimestamp().utcnow().isoformat()
 
     // Validate and construct params
     if (validateFields_Var) {
