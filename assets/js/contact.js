@@ -20,6 +20,7 @@ function sendMessage() {
     var raiderio = document.getElementById("raiderio").value;
     var message = document.getElementById("message").value;
     var validateFields_Var = validateFields(charname, battletag, discord, spec, logs, raiderio, message);
+    var timeisnow = datetime.utcnow().isoformat()
 
     // Validate and construct params
     if (validateFields_Var) {
@@ -27,6 +28,7 @@ function sendMessage() {
             username: "Application Received from: " + charname,
             avatar_url: "https://lasthopeguild.com/favicon.png",
             content: "",
+            timestamp: timeisnow,
             components: [
                 {
                   "type": 1,
