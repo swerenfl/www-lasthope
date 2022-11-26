@@ -27,10 +27,41 @@ function sendMessage() {
             username: "Application Received from: " + charname,
             avatar_url: "https://lasthopeguild.com/favicon.png",
             content: "",
+            components: [
+                {
+                  "type": 1,
+                  "components": [
+                    {
+                      "style": 1,
+                      "custom_id": `row_0_button_0`,
+                      "disabled": false,
+                      "emoji": {
+                        "id": null,
+                        "name": `👍`
+                      },
+                      "type": 2
+                    },
+                    {
+                      "style": 1,
+                      "custom_id": `row_0_button_2`,
+                      "disabled": false,
+                      "emoji": {
+                        "id": null,
+                        "name": `👎`
+                      },
+                      "type": 2
+                    }
+                  ]
+                }
+              ],
             embeds: [
                 {
                   "title": "Please review the application below and vote with either :thumbsup: or :thumbsdown:",
                   "color": 4437377,
+                  "footer": {
+                    "text": "Source: lasthopeguild.com",
+                    "icon_url": "https://lasthopeguild.com/favicon.png"
+                  },
                   "fields": [
                     {
                         "name": "Character Name",
