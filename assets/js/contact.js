@@ -32,7 +32,8 @@ function sendMessage() {
                   "type": 1,
                   "components": [
                     {
-                      "style": 1,
+                      "style": 3,
+                      "label": `Good`,
                       "custom_id": `row_0_button_0`,
                       "disabled": false,
                       "emoji": {
@@ -42,8 +43,9 @@ function sendMessage() {
                       "type": 2
                     },
                     {
-                      "style": 1,
-                      "custom_id": `row_0_button_2`,
+                      "style": 4,
+                      "label": `Bad`,
+                      "custom_id": `row_0_button_1`,
                       "disabled": false,
                       "emoji": {
                         "id": null,
@@ -53,7 +55,7 @@ function sendMessage() {
                     }
                   ]
                 }
-              ],
+            ],
             embeds: [
                 {
                   "title": "Please review the application below and vote with either :thumbsup: or :thumbsdown:",
