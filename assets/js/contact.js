@@ -19,8 +19,9 @@ function sendMessage() {
     var logs = document.getElementById("logs").value;
     var raiderio = document.getElementById("raiderio").value;
     var message = document.getElementById("message").value;
-    var validateFields_Var = validateFields(charname, battletag, discord, spec, logs, raiderio, message);
     var timeisnow = new Date().toISOString();
+    var validateFields_Var = validateFields(charname, battletag, discord, spec, logs, raiderio, message, timeisnow);
+
 
     // Validate and construct params
     if (validateFields_Var) {
