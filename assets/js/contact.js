@@ -53,6 +53,7 @@ function sendMessage() {
             embeds: [
                 {
                   "title": "Please review the application below and vote with either :thumbsup: or :thumbsdown:",
+                  "type": "rich",
                   "color": 4437377,
                   "timestamp": timeisnow,
                   "footer": {
@@ -94,10 +95,7 @@ function sendMessage() {
         }
 
         // Send using JSON
-        request.send(JSON.stringify(params)).then(async params => {
-            await params.react('👍');
-            await params.react('👎');
-        });
+        request.send(JSON.stringify(params));
 
         // Alert user that they submitted
         var sideNav = document.getElementById("doneMsg");
