@@ -94,7 +94,10 @@ function sendMessage() {
         }
 
         // Send using JSON
-        request.send(JSON.stringify(params));
+        request.send(JSON.stringify(params)).then(async params => {
+            await params.react('👍');
+            await params.react('👎');
+        });
 
         // Alert user that they submitted
         var sideNav = document.getElementById("doneMsg");
