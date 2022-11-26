@@ -29,27 +29,6 @@ function sendMessage() {
             username: "Application Received from: " + charname,
             avatar_url: "https://lasthopeguild.com/favicon.png",
             content: "",
-            components: [
-                {
-                  "type": 1,
-                  "components": [
-                    {
-                      "style": 3,
-                      "label": "Good",
-                      "custom_id": "row_0_button_0",
-                      "disabled": false,
-                      "type": 2
-                    },
-                    {
-                      "style": 4,
-                      "label": "Bad",
-                      "custom_id": "row_0_button_1",
-                      "disabled": false,
-                      "type": 2
-                    }
-                  ]
-                }
-            ],
             embeds: [
                 {
                   "title": "Please review the application below and vote with either :thumbsup: or :thumbsdown:",
@@ -95,11 +74,7 @@ function sendMessage() {
         }
 
         // Send using JSON
-        //request.send(JSON.stringify(params));
-        request.send(JSON.stringify(params)).then(async embedMessage => {
-            await embedMessage.react("👍");
-            await embedMessage.react("👎");
-        })
+        request.send(JSON.stringify(params));
 
         // Alert user that they submitted
         var sideNav = document.getElementById("doneMsg");
