@@ -20,7 +20,7 @@ function sendMessage() {
     var raiderio = document.getElementById("raiderio").value;
     var message = document.getElementById("message").value;
     var timeisnow = new Date().toISOString();
-    var validateFields_Var = validateFields(charname, battletag, discord, spec, logs, raiderio, message, timeisnow);
+    var validateFields_Var = validateFields(charname, battletag, discord, spec, logs, raiderio, message);
 
 
     // Validate and construct params
@@ -29,7 +29,6 @@ function sendMessage() {
             username: "Application Received from: " + charname,
             avatar_url: "https://lasthopeguild.com/favicon.png",
             content: "",
-            timestamp: timeisnow,
             components: [
                 {
                   "type": 1,
@@ -63,6 +62,7 @@ function sendMessage() {
                 {
                   "title": "Please review the application below and vote with either :thumbsup: or :thumbsdown:",
                   "color": 4437377,
+                  "timestamp": timeisnow,
                   "footer": {
                     "text": "Source: lasthopeguild.com",
                     "icon_url": "https://lasthopeguild.com/favicon.png"
