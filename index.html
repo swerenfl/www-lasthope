@@ -181,7 +181,10 @@
 
         <!-- Menu -->
         <ul class="menu">
-            <li>&copy; 2025 Last Hope of Illidan</li>
+            <li>&copy; <span id="year"></span> Last Hope of Illidan</li>
+                <script>
+					document.getElementById('year').textContent = new Date().getFullYear();
+				</script>
             <li>Designed by: <a href="https://twitter.com/swerenfl">@swerenfl</a></li>
         </ul>
 
