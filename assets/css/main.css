@@ -2422,7 +2422,7 @@ body.is-touch .main {
 /* Intro */
 
 #intro {
-    background: url("images/overlay.png"), url("../../images/intro-2024.jpg");
+    background: url("images/overlay.png"), url("../../images/intro-2026.jpg");
     background-size: 256px 256px, cover;
     background-attachment: fixed, fixed;
     background-position: top center;
@@ -2433,7 +2433,7 @@ body.is-touch .main {
 /* History */
 
 #history {
-    background: url("images/overlay.png"), url("../../images/one-2024.jpg");
+    background: url("images/overlay.png"), url("../../images/one-2026.jpg");
     background-size: 256px 256px, cover;
     background-attachment: fixed, fixed;
     background-position: top left, center center;
@@ -2443,7 +2443,7 @@ body.is-touch .main {
 /* Philosophy */
 
 #philosophy {
-    background: url("images/overlay.png"), url("../../images/two-2024.jpg");
+    background: url("images/overlay.png"), url("../../images/two-2026.jpg");
     background-size: 256px 256px, cover;
     background-attachment: fixed, fixed;
     background-position: top left, center center;
