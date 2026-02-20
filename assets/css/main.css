@@ -761,7 +761,7 @@ button {
     -webkit-transition: background-color 0.2s ease-in-out;
     -ms-transition: background-color 0.2s ease-in-out;
     transition: background-color 0.2s ease-in-out;
-    background-color: #98c593;
+    background-color: #636ee1; /* Added color here RLS3 2/20/26 */
     border: 0;
     border-radius: 3.5em;
     color: #ffffff;
@@ -2247,7 +2247,7 @@ body {
 }
 
 .main.style3.secondary {
-    background: #959b9e;
+    background: #636ee157;  /* Added color here RLS3 2/20/26 */
 }
 
 .main.dark {
@@ -2360,8 +2360,8 @@ body.is-touch .main {
     margin: 0;
     line-height: 1em;
     padding: 1.5em;
-    background: #39454b;
-    color: rgba(185, 186, 187, 0.5);
+    background: #636ee1; /* Added color here RLS3 2/20/26 */
+    color: #ffffff; /* Added color here RLS3 2/20/26 */
     overflow: hidden;
 }
 
