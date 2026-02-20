@@ -2077,6 +2077,7 @@ body.is-touch .poptrox-popup .closer {
 #header nav ul li a {
     display: block;
     color: inherit;
+    font-weight: bold; /* Added bold here RLS3 2/20/26 */
     text-decoration: none;
     height: 3em;
     line-height: 3em;
